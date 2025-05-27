@@ -191,7 +191,7 @@ section {
 .projeto-card {
     background: white;
     border-radius: 10px;
-    overflow: hidden;
+    overflow: visible;
     box-shadow: var(--sombra);
     transition: var(--transicao);
 }
@@ -213,12 +213,6 @@ section {
 
 .projeto-info {
     padding: 1.5rem;
-}
-
-.projeto-links {
-    display: flex;
-    gap: 1rem;
-    margin-top: 1rem;
 }
 
 .projeto-links a {

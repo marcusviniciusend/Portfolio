@@ -1,3 +1,10 @@
+function carregarProjetos() {
+    const container = document.getElementById('projetos-container');
+    if (container.childElementCount === 0) {
+        container.innerHTML = '<p style="text-align: center; grid-column: 1/-1; color: var(--cor-texto-claro); animation: fadeInUp 1s ease;">Projetos em breve!</p>';
+    }
+}
+
 function typeWriterEffect(element, text, speed, eraseSpeed, delay) {
     let i = 0;
     let isTyping = true;
@@ -28,7 +35,9 @@ function typeWriterEffect(element, text, speed, eraseSpeed, delay) {
 
 function carregarProjetos() {
     const container = document.getElementById('projetos-container');
-    container.innerHTML = '<p style="text-align: center; grid-column: 1/-1; color: var(--cor-texto-claro); animation: fadeInUp 1s ease;">Projetos em breve!</p>';
+    if (container.childElementCount === 0) {
+        container.innerHTML = '<p style="text-align: center; grid-column: 1/-1; color: var(--cor-texto-claro); animation: fadeInUp 1s ease;">Projetos em breve!</p>';
+    }
 }
 
 document.addEventListener('DOMContentLoaded', function() {

@@ -186,14 +186,16 @@ section {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
     margin-top: 2rem;
+    opacity: 1; /* Removendo efeito de fade inicial */
 }
 
 .projeto-card {
     background: white;
     border-radius: 10px;
-    overflow: visible;
+    overflow: hidden;
     box-shadow: var(--sombra);
     transition: var(--transicao);
+    opacity: 1; /* Garantindo visibilidade */
 }
 
 .projeto-card:hover {

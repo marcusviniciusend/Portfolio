@@ -3,133 +3,326 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Marcus Vinicius - Portfólio</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <meta name="color-scheme" content="dark">
+
+    <title>Marcus Vinicius — Desenvolvedor de Software</title>
+    <meta name="description" content="Portfólio de Marcus Vinicius, desenvolvedor de software na Medsafe e estudante de Engenharia de Software no iCEV (Teresina-PI). Software para saúde, IA aplicada e produtos web.">
+    <meta name="author" content="Marcus Vinicius Moura Lima">
+    <link rel="canonical" href="https://marcusviniciusend.github.io/Portfolio/">
+
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:site_name" content="Marcus Vinicius">
+    <meta property="og:title" content="Marcus Vinicius — Desenvolvedor de Software">
+    <meta property="og:description" content="Software para saúde, IA aplicada e produtos web. Desenvolvedor na Medsafe · Engenharia de Software no iCEV.">
+    <meta property="og:url" content="https://marcusviniciusend.github.io/Portfolio/">
+    <meta name="twitter:card" content="summary">
+
+    <meta name="theme-color" content="#0B0A14">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <button class="menu-toggle"><i class="fas fa-bars"></i></button>
-            <ul class="nav-links">
-                <li><a href="#inicio">Início</a></li>
-                <li><a href="#sobre">Sobre</a></li>
-                <li><a href="#habilidades">Habilidades</a></li>
-                <li><a href="#projetos">Projetos</a></li>
-                <li><a href="#contato">Contato</a></li>
+<!-- Sprite de ícones em SVG inline: evita a folha externa do Font Awesome, que bloqueava a renderização -->
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true" focusable="false">
+    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M3 6h18M3 12h18M3 18h18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+    <symbol id="i-github" viewBox="0 0 24 24"><path fill="currentColor" d="M12 .5a12 12 0 0 0-3.79 23.39c.6.11.82-.26.82-.58v-2.2c-3.34.72-4.04-1.42-4.04-1.42-.55-1.39-1.34-1.76-1.34-1.76-1.09-.75.08-.73.08-.73 1.2.08 1.84 1.24 1.84 1.24 1.07 1.84 2.81 1.31 3.5 1 .11-.78.42-1.31.76-1.61-2.67-.3-5.47-1.34-5.47-5.96 0-1.32.47-2.39 1.24-3.23-.13-.3-.54-1.53.11-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 6.01 0c2.29-1.55 3.3-1.23 3.3-1.23.65 1.65.24 2.88.12 3.18.77.84 1.23 1.91 1.23 3.23 0 4.63-2.8 5.65-5.48 5.95.43.37.82 1.1.82 2.22v3.29c0 .32.21.7.82.58A12 12 0 0 0 12 .5Z"/></symbol>
+    <symbol id="i-linkedin" viewBox="0 0 24 24"><path fill="currentColor" d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM3 9h4v12H3zM9 9h3.8v1.7h.05c.53-.95 1.83-1.95 3.76-1.95 4.02 0 4.76 2.5 4.76 5.76V21h-4v-5.6c0-1.34-.03-3.06-1.9-3.06-1.9 0-2.19 1.45-2.19 2.96V21H9z"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" d="M3 6h18v12H3zM3 7l9 6 9-6"/></symbol>
+    <symbol id="i-instagram" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" d="M7 3h10a4 4 0 0 1 4 4v10a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V7a4 4 0 0 1 4-4Z"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="17.4" cy="6.6" r="1.1" fill="currentColor"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" d="M6.5 3h3l1.5 4-2 1.5a12 12 0 0 0 6.5 6.5L17 13l4 1.5v3a2.5 2.5 0 0 1-2.8 2.5C10.4 19.2 4.8 13.6 4 5.8A2.5 2.5 0 0 1 6.5 3Z"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6"/></symbol>
+    <symbol id="i-lock" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" d="M5 11h14v9H5zM8 11V7.5a4 4 0 0 1 8 0V11"/></symbol>
+</svg>
+
+<a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+<header class="site-header" id="topo">
+    <nav class="nav" aria-label="Navegação principal">
+        <a href="#inicio" class="brand" aria-label="Início">
+            <span class="brand-mark">MV</span>
+            <span class="brand-text">Marcus Vinicius</span>
+        </a>
+
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Abrir menu">
+            <svg class="icon icon-open" aria-hidden="true"><use href="#i-menu"></use></svg>
+            <svg class="icon icon-shut" aria-hidden="true"><use href="#i-close"></use></svg>
+        </button>
+
+        <ul class="nav-links" id="nav-links">
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#experiencia">Experiência</a></li>
+            <li><a href="#projetos">Projetos</a></li>
+            <li><a href="#stack">Stack</a></li>
+            <li><a href="#contato">Contato</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main id="conteudo">
+    <section id="inicio" class="hero">
+        <div class="hero-inner">
+            <p class="eyebrow">Teresina · Piauí · Brasil</p>
+            <h1>Marcus Vinicius</h1>
+            <p class="hero-role">
+                <span id="type-target">Desenvolvedor de Software</span><span class="caret" aria-hidden="true"></span>
+            </p>
+            <p class="hero-desc">
+                Construo produtos que resolvem problemas reais — com foco em dados,
+                IA aplicada e sistemas que precisam ser confiáveis de verdade.
+            </p>
+            <div class="hero-actions">
+                <a href="#projetos" class="btn btn-primary">
+                    Ver projetos <svg class="icon" aria-hidden="true"><use href="#i-arrow"></use></svg>
+                </a>
+                <a href="#contato" class="btn btn-ghost">Entrar em contato</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="sobre" class="section">
+        <div class="container">
+            <h2 class="section-title">Sobre mim</h2>
+            <p class="section-sub">Quem sou e o que faço no dia a dia.</p>
+
+            <div class="about">
+                <div class="about-text reveal">
+                    <p>
+                        Sou <strong>Marcus Vinicius</strong>, desenvolvedor de software na
+                        <span class="hl">Medsafe</span> e estudante de
+                        <span class="hl">Engenharia de Software</span> no
+                        <strong>iCEV</strong> (5º semestre), em Teresina&nbsp;–&nbsp;PI.
+                    </p>
+                    <p>
+                        Trabalho com desenvolvimento na <strong>área da saúde</strong>: plataformas clínicas,
+                        pipelines de IA para transcrição médica e dashboards que transformam
+                        dados dispersos em decisão. Gosto de arquitetura bem pensada, integrações
+                        que não quebram e código que outra pessoa consegue ler.
+                    </p>
+                    <p>
+                        Fora do trabalho, estudo IA aplicada e construo projetos próprios —
+                        de assistentes de voz a apps desktop.
+                    </p>
+                </div>
+
+                <ul class="about-facts reveal">
+                    <li><span class="fact-k">Atuação</span><span class="fact-v">Desenvolvedor · Medsafe</span></li>
+                    <li><span class="fact-k">Formação</span><span class="fact-v">Eng. de Software · iCEV</span></li>
+                    <li><span class="fact-k">Semestre</span><span class="fact-v">5º</span></li>
+                    <li><span class="fact-k">Local</span><span class="fact-v">Teresina · PI</span></li>
+                    <li><span class="fact-k">Foco</span><span class="fact-v">Saúde · IA aplicada · Backend</span></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="experiencia" class="section section-alt">
+        <div class="container">
+            <h2 class="section-title">Experiência</h2>
+            <p class="section-sub">Onde o código vira produto em uso.</p>
+
+            <ol class="timeline">
+                <li class="timeline-item reveal">
+                    <div class="timeline-head">
+                        <h3>Desenvolvedor de Software</h3>
+                        <span class="badge">Medsafe</span>
+                    </div>
+                    <p class="timeline-meta">Plataforma Medsafe / Paciente Integrado · Teresina&nbsp;–&nbsp;PI</p>
+                    <ul class="timeline-list">
+                        <li>Desenvolvimento e evolução da plataforma clínica usada por profissionais de saúde.</li>
+                        <li>Pipeline de <strong>IA para transcrição médica</strong>, transformando consultas em registros estruturados.</li>
+                        <li>Integrações entre serviços, modelagem de dados e qualidade de software com testes automatizados.</li>
+                    </ul>
+                    <p class="chips">
+                        <span class="chip">Python</span><span class="chip">FastAPI</span><span class="chip">PostgreSQL</span><span class="chip">React</span><span class="chip">Docker</span>
+                    </p>
+                </li>
+
+                <li class="timeline-item reveal">
+                    <div class="timeline-head">
+                        <h3>Dashboard Linha de Cuidados — Trauma</h3>
+                        <span class="badge">Projeto clínico</span>
+                    </div>
+                    <p class="timeline-meta">Análise e visualização de dados assistenciais</p>
+                    <ul class="timeline-list">
+                        <li>Painel para acompanhamento da linha de cuidado de trauma, com indicadores por etapa do atendimento.</li>
+                        <li>Consolidação de dados dispersos em métricas comparáveis, apoiando decisão clínica e gestão.</li>
+                    </ul>
+                    <p class="chips">
+                        <span class="chip">Python</span><span class="chip">SQL</span><span class="chip">Visualização de dados</span>
+                    </p>
+                </li>
+            </ol>
+        </div>
+    </section>
+
+    <section id="projetos" class="section">
+        <div class="container">
+            <h2 class="section-title">Projetos</h2>
+            <p class="section-sub">Coisas que construí — algumas públicas, outras ainda em desenvolvimento.</p>
+
+            <div class="cards">
+                <article class="card reveal">
+                    <div class="card-top">
+                        <h3>Shogun</h3>
+                        <span class="card-tag">Público</span>
+                    </div>
+                    <p>Assistente pessoal de voz no estilo JARVIS — um comandante digital com versões desktop e mobile, que entende comandos falados e executa tarefas.</p>
+                    <p class="chips"><span class="chip">Python</span><span class="chip">Voz / STT</span><span class="chip">Desktop</span><span class="chip">Mobile</span></p>
+                    <a class="card-link" href="https://github.com/marcusviniciusend/shogun" target="_blank" rel="noopener noreferrer">
+                        <svg class="icon" aria-hidden="true"><use href="#i-github"></use></svg>
+                        Ver repositório
+                    </a>
+                </article>
+
+                <article class="card reveal">
+                    <div class="card-top">
+                        <h3>jacatalk</h3>
+                        <span class="card-tag card-tag-muted">Em desenvolvimento</span>
+                    </div>
+                    <p>App de chat desktop no estilo Discord: servidores, canais e mensagens em tempo real, pensado para comunidades.</p>
+                    <p class="chips"><span class="chip">Desktop</span><span class="chip">Tempo real</span><span class="chip">WebSocket</span></p>
+                    <span class="card-link card-link-off">
+                        <svg class="icon" aria-hidden="true"><use href="#i-lock"></use></svg>
+                        Repositório privado
+                    </span>
+                </article>
+
+                <article class="card reveal">
+                    <div class="card-top">
+                        <h3>Easy Lawyer</h3>
+                        <span class="card-tag card-tag-muted">Em desenvolvimento</span>
+                    </div>
+                    <p>Marketplace de advogados no modelo Doctoralia — busca por especialidade, agenda e conexão direta entre cliente e profissional.</p>
+                    <p class="chips"><span class="chip">React</span><span class="chip">API REST</span><span class="chip">Marketplace</span></p>
+                    <span class="card-link card-link-off">
+                        <svg class="icon" aria-hidden="true"><use href="#i-lock"></use></svg>
+                        Repositório privado
+                    </span>
+                </article>
+
+                <article class="card reveal">
+                    <div class="card-top">
+                        <h3>PetZone</h3>
+                        <span class="card-tag">Público</span>
+                    </div>
+                    <p>Projeto de extensão do iCEV: plataforma mobile em React Native para conectar tutores de pets a serviços e à comunidade.</p>
+                    <p class="chips"><span class="chip">React Native</span><span class="chip">TypeScript</span></p>
+                    <a class="card-link" href="https://github.com/marcusviniciusend/PetZone" target="_blank" rel="noopener noreferrer">
+                        <svg class="icon" aria-hidden="true"><use href="#i-github"></use></svg>
+                        Ver repositório
+                    </a>
+                </article>
+
+                <article class="card reveal">
+                    <div class="card-top">
+                        <h3>Automação Web &amp; API</h3>
+                        <span class="card-tag">Público</span>
+                    </div>
+                    <p>Suíte de testes automatizados em Python: testes de API com Requests e testes web E2E com Selenium/Pytest usando o padrão Page Objects.</p>
+                    <p class="chips"><span class="chip">Python</span><span class="chip">Pytest</span><span class="chip">Selenium</span></p>
+                    <a class="card-link" href="https://github.com/marcusviniciusend/automacao-web-api-python" target="_blank" rel="noopener noreferrer">
+                        <svg class="icon" aria-hidden="true"><use href="#i-github"></use></svg>
+                        Ver repositório
+                    </a>
+                </article>
+
+                <article class="card card-cta reveal">
+                    <div class="card-top"><h3>Mais no GitHub</h3></div>
+                    <p>Repositórios de estudo, projetos acadêmicos e experimentos ficam por lá.</p>
+                    <a class="card-link" href="https://github.com/marcusviniciusend?tab=repositories" target="_blank" rel="noopener noreferrer">
+                        <svg class="icon" aria-hidden="true"><use href="#i-github"></use></svg>
+                        Ver todos os repositórios
+                    </a>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section id="stack" class="section section-alt">
+        <div class="container">
+            <h2 class="section-title">Stack</h2>
+            <p class="section-sub">Tecnologias que uso no dia a dia.</p>
+
+            <div class="stack-grid">
+                <div class="stack-group reveal">
+                    <h3>Backend</h3>
+                    <ul><li>Python</li><li>FastAPI</li><li>APIs REST</li><li>Node.js</li></ul>
+                </div>
+                <div class="stack-group reveal">
+                    <h3>Frontend</h3>
+                    <ul><li>TypeScript</li><li>JavaScript (ES6+)</li><li>React</li><li>HTML5 &amp; CSS3</li></ul>
+                </div>
+                <div class="stack-group reveal">
+                    <h3>Dados</h3>
+                    <ul><li>PostgreSQL</li><li>SQL</li><li>Redis</li><li>Modelagem de dados</li></ul>
+                </div>
+                <div class="stack-group reveal">
+                    <h3>Qualidade &amp; Infra</h3>
+                    <ul><li>Pytest</li><li>Selenium</li><li>Docker</li><li>Git &amp; GitHub</li></ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contato" class="section contato">
+        <div class="container">
+            <h2 class="section-title">Contato</h2>
+            <p class="section-sub">Aberto a oportunidades, colaborações e uma boa conversa técnica.</p>
+
+            <ul class="contato-grid">
+                <li class="reveal">
+                    <a href="https://github.com/marcusviniciusend" target="_blank" rel="noopener noreferrer">
+                        <svg class="icon" aria-hidden="true"><use href="#i-github"></use></svg>
+                        <span class="c-label">GitHub</span>
+                        <span class="c-value">@marcusviniciusend</span>
+                    </a>
+                </li>
+                <li class="reveal">
+                    <a href="https://www.linkedin.com/in/marcus-vinicius-moura-lima-38341b352/" target="_blank" rel="noopener noreferrer">
+                        <svg class="icon" aria-hidden="true"><use href="#i-linkedin"></use></svg>
+                        <span class="c-label">LinkedIn</span>
+                        <span class="c-value">Marcus Vinicius Moura Lima</span>
+                    </a>
+                </li>
+                <li class="reveal">
+                    <a href="mailto:mourasoma@gmail.com">
+                        <svg class="icon" aria-hidden="true"><use href="#i-mail"></use></svg>
+                        <span class="c-label">E-mail</span>
+                        <span class="c-value">mourasoma@gmail.com</span>
+                    </a>
+                </li>
+                <li class="reveal">
+                    <a href="tel:+5586999401250">
+                        <svg class="icon" aria-hidden="true"><use href="#i-phone"></use></svg>
+                        <span class="c-label">Telefone</span>
+                        <span class="c-value">+55 (86) 99940-1250</span>
+                    </a>
+                </li>
+                <li class="reveal">
+                    <a href="https://www.instagram.com/marcusvm._/" target="_blank" rel="noopener noreferrer">
+                        <svg class="icon" aria-hidden="true"><use href="#i-instagram"></use></svg>
+                        <span class="c-label">Instagram</span>
+                        <span class="c-value">@marcusvm._</span>
+                    </a>
+                </li>
             </ul>
-        </nav>
-    </header>
+        </div>
+    </section>
+</main>
 
-    <main>
-        <section id="inicio" class="hero">
-            <div class="hero-content">
-                <h1>Marcus Vinicius</h1>
-                <p>Desenvolvedor Full Stack</p>
-                <a href="#projetos" class="btn">Ver Meus Projetos</a>
-            </div>
-        </section>
+<footer class="site-footer">
+    <div class="container footer-inner">
+        <p>© <span id="ano">2026</span> Marcus Vinicius. Feito com HTML, CSS e JavaScript.</p>
+        <a href="#topo" class="to-top">Voltar ao topo ↑</a>
+    </div>
+</footer>
 
-        <section id="sobre" class="sobre">
-            <h2>Sobre Mim</h2>
-            <div class="sobre-content">
-                <img src="https://via.placeholder.com/300" alt="Foto" class="perfil-img fade-in">
-                <div class="fade-in">
-                    <h3><span class="highlight">Desenvolvedor Full Stack</span></h3>
-                    <p>Olá! Sou Marcus Vinicius, um desenvolvedor apaixonado por tecnologia com foco em desenvolvimento web moderno. <span class="highlight">Especializo-me em JavaScript, Node.js</span> e outras tecnologias.</p>
-                    <p>Tenho experiência em projetos que vão desde aplicações web responsivas até sistemas complexos. Sempre busco aprender novas tecnologias e implementar as melhores práticas de desenvolvimento.</p>
-                    <p><strong>Formação:</strong> Instituto Superior iCEV</p>
-                    <p><strong>Foco:</strong> Desenvolvimento web full stack e tecnologias emergentes</p>
-                </div>
-            </div>
-        </section>
-
-        <section id="habilidades" class="habilidades">
-            <h2>Habilidades</h2>
-            <div class="habilidades-grid">
-                <div class="habilidade-item fade-in">
-                    <i class="fab fa-js-square"></i>
-                    <h3>JavaScript</h3>
-                    <p>Desenvolvimento com ES6+, frameworks e bibliotecas</p>
-                </div>
-                <div class="habilidade-item fade-in">
-                    <i class="fab fa-node-js"></i>
-                    <h3>Node.js</h3>
-                    <p>APIs REST, Express.js e desenvolvimento backend</p>
-                </div>
-                <div class="habilidade-item fade-in">
-                    <i class="fab fa-java"></i>
-                    <h3>Java</h3>
-                    <p>Desenvolvimento de aplicações e sistemas robustos</p>
-                </div>
-                <div class="habilidade-item fade-in">
-                    <i class="fab fa-git-alt"></i>
-                    <h3>Git & GitHub</h3>
-                    <p>Controle de versão e colaboração em equipe</p>
-                </div>
-            </div>
-        </section>
-
-        <section id="projetos" class="projetos">
-            <h2>Projetos</h2>
-            <div id="projetos-container" class="projetos-grid">
-                <div class="projeto-card">
-                    <div class="projeto-img">
-                        <i class="fab fa-github"></i>
-                    </div>
-                    <div class="projeto-info">
-                        <h3>Meu Portfólio</h3>
-                        <p>Um portfólio pessoal desenvolvido com HTML, CSS e JavaScript.</p>
-                        <div class="projeto-links">
-                            <a href="https://github.com/marcusviniciusend/Portfolio" target="_blank" rel="noopener noreferrer">Ver no GitHub</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="contato" class="contato">
-            <h2>Contato</h2>
-            <div class="contato-content">
-                <div class="contato-item fade-in">
-                    <a href="mailto:marcusviniciussoma@gmail.com" class="contato-btn" title="Email">
-                        <i class="fas fa-envelope"></i>
-                    </a>
-                    <span>Email</span>
-                </div>
-                <div class="contato-item fade-in">
-                    <a href="https://linkedin.com/in/marcusvinicius" target="_blank" class="contato-btn" title="LinkedIn">
-                        <i class="fab fa-linkedin"></i>
-                    </a>
-                    <span>LinkedIn</span>
-                </div>
-                <div class="contato-item fade-in">
-                    <a href="https://github.com/marcusviniciusend" target="_blank" class="contato-btn" title="GitHub">
-                        <i class="fab fa-github"></i>
-                    </a>
-                    <span>GitHub</span>
-                </div>
-                <div class="contato-item fade-in">
-                    <a href="https://www.instagram.com/marcusvm._?igsh=aGtzcXVqM3p1eTN4" target="_blank" class="contato-btn" title="Instagram">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                    <span>Instagram</span>
-                </div>
-                <div class="contato-item fade-in">
-                    <a href="tel:+5586999401250" class="contato-btn" title="Telefone">
-                        <i class="fas fa-phone"></i>
-                    </a>
-                    <span>Telefone</span>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <p>© 2025 Marcus Vinicius. Todos os direitos reservados.</p>
-    </footer>
-
-    <script src="script.js"></script>
+<script src="script.js" defer></script>
 </body>
 </html>

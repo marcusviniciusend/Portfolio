@@ -1,21 +1,22 @@
 /* ==========================================================================
    Portfólio — Marcus Vinicius
-   Paleta escura com roxo/ciano, alinhada ao README do perfil no GitHub.
+   Base preto/cinza-chumbo neutra com acentos pontuais em roxo/ciano,
+   alinhada ao README do perfil no GitHub.
    ========================================================================== */
 
 :root {
     /* Superfícies */
-    --bg:            #0B0A14;
-    --bg-alt:        #100E1D;
+    --bg:            #0A0A0C;
+    --bg-alt:        #101014;
     --surface:       rgba(255, 255, 255, 0.035);
     --surface-hover: rgba(255, 255, 255, 0.06);
     --border:        rgba(255, 255, 255, 0.09);
     --border-strong: rgba(124, 58, 237, 0.45);
 
     /* Texto */
-    --text:          #E8E7F0;
-    --text-muted:    #A7A4BC;
-    --text-faint:    #78748F;
+    --text:          #E6E7EB;
+    --text-muted:    #A4A8B3;
+    --text-faint:    #797E8A;
 
     /* Marca */
     --brand:         #7C3AED;
@@ -64,8 +65,8 @@ body {
     color: var(--text);
     background-color: var(--bg);
     background-image:
-        radial-gradient(60rem 40rem at 12% -10%, rgba(124, 58, 237, 0.20), transparent 60%),
-        radial-gradient(50rem 34rem at 92% 4%, rgba(34, 211, 238, 0.11), transparent 60%);
+        radial-gradient(60rem 40rem at 12% -10%, rgba(124, 58, 237, 0.09), transparent 60%),
+        radial-gradient(50rem 34rem at 92% 4%, rgba(34, 211, 238, 0.05), transparent 60%);
     background-attachment: fixed;
     -webkit-font-smoothing: antialiased;
     overflow-x: hidden;
@@ -124,7 +125,7 @@ a {
     height: var(--header-h);
     display: flex;
     align-items: center;
-    background: rgba(11, 10, 20, 0.72);
+    background: rgba(10, 10, 12, 0.72);
     backdrop-filter: blur(14px);
     -webkit-backdrop-filter: blur(14px);
     border-bottom: 1px solid transparent;
@@ -133,7 +134,7 @@ a {
 
 .site-header.scrolled {
     border-bottom-color: var(--border);
-    background: rgba(11, 10, 20, 0.9);
+    background: rgba(10, 10, 12, 0.9);
 }
 
 .nav {
@@ -163,8 +164,9 @@ a {
     font-family: var(--font-mono);
     font-size: 0.78rem;
     font-weight: 600;
-    color: #fff;
-    background: linear-gradient(135deg, var(--brand), var(--accent));
+    color: var(--brand-soft);
+    background: #15151a;
+    border: 1px solid var(--border-strong);
 }
 
 .brand-text {
@@ -249,7 +251,7 @@ a {
     line-height: 1.05;
     letter-spacing: -0.035em;
     font-weight: 700;
-    background: linear-gradient(105deg, #FFFFFF 25%, var(--brand-soft) 70%, var(--accent));
+    background: linear-gradient(105deg, #FFFFFF 35%, #B9BDC9 75%, var(--brand-soft));
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
@@ -306,12 +308,12 @@ a {
 .btn-primary {
     color: #fff;
     background: linear-gradient(135deg, var(--brand), #6D28D9);
-    box-shadow: 0 10px 26px -12px rgba(124, 58, 237, 0.95);
+    box-shadow: 0 10px 26px -12px rgba(124, 58, 237, 0.55);
 }
 
 .btn-primary:hover {
     transform: translateY(-2px);
-    box-shadow: 0 16px 32px -12px rgba(124, 58, 237, 1);
+    box-shadow: 0 16px 32px -12px rgba(124, 58, 237, 0.7);
 }
 
 .btn-primary .icon {
@@ -629,7 +631,7 @@ a {
 
 .card-cta {
     justify-content: center;
-    background: linear-gradient(140deg, rgba(124, 58, 237, 0.16), rgba(34, 211, 238, 0.07));
+    background: linear-gradient(140deg, rgba(124, 58, 237, 0.09), rgba(34, 211, 238, 0.04));
     border-style: dashed;
 }
 
@@ -811,7 +813,7 @@ a {
         align-items: stretch;
         gap: 0.15rem;
         padding: var(--space-2);
-        background: rgba(11, 10, 20, 0.97);
+        background: rgba(10, 10, 12, 0.97);
         backdrop-filter: blur(14px);
         -webkit-backdrop-filter: blur(14px);
         border-bottom: 1px solid var(--border);

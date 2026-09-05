@@ -18,12 +18,12 @@
     <meta property="og:url" content="https://portfolio-liart-delta-61.vercel.app/">
     <meta name="twitter:card" content="summary">
 
-    <meta name="theme-color" content="#0A0A0C">
+    <meta name="theme-color" content="#0A0A0A">
     <link rel="icon" href="favicon.svg" type="image/svg+xml">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -38,6 +38,10 @@
     <symbol id="i-phone" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" d="M6.5 3h3l1.5 4-2 1.5a12 12 0 0 0 6.5 6.5L17 13l4 1.5v3a2.5 2.5 0 0 1-2.8 2.5C10.4 19.2 4.8 13.6 4 5.8A2.5 2.5 0 0 1 6.5 3Z"/></symbol>
     <symbol id="i-arrow" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6"/></symbol>
     <symbol id="i-lock" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" d="M5 11h14v9H5zM8 11V7.5a4 4 0 0 1 8 0V11"/></symbol>
+    <symbol id="i-server" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" d="M4 4h16v6H4zM4 14h16v6H4z"/><circle cx="8" cy="7" r="1" fill="currentColor"/><circle cx="8" cy="17" r="1" fill="currentColor"/></symbol>
+    <symbol id="i-code" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M8 6l-6 6 6 6M16 6l6 6-6 6"/></symbol>
+    <symbol id="i-db" viewBox="0 0 24 24"><ellipse cx="12" cy="5.5" rx="8" ry="2.8" fill="none" stroke="currentColor" stroke-width="1.8"/><path fill="none" stroke="currentColor" stroke-width="1.8" d="M4 5.5v13c0 1.55 3.58 2.8 8 2.8s8-1.25 8-2.8v-13M4 12c0 1.55 3.58 2.8 8 2.8s8-1.25 8-2.8"/></symbol>
+    <symbol id="i-gear" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3.2" fill="none" stroke="currentColor" stroke-width="1.8"/><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" d="M12 2.5v3M12 18.5v3M2.5 12h3M18.5 12h3M5.3 5.3l2.1 2.1M16.6 16.6l2.1 2.1M18.7 5.3l-2.1 2.1M7.4 16.6l-2.1 2.1"/></symbol>
 </svg>
 
 <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
@@ -251,19 +255,39 @@
 
             <div class="stack-grid">
                 <div class="stack-group reveal">
-                    <h3>Backend</h3>
+                    <span class="stack-num" aria-hidden="true">01</span>
+                    <div class="stack-head">
+                        <svg class="icon" aria-hidden="true"><use href="#i-server"></use></svg>
+                        <h3>Backend</h3>
+                    </div>
+                    <p class="stack-desc">APIs e serviços que sustentam o produto.</p>
                     <ul><li>Python</li><li>FastAPI</li><li>APIs REST</li><li>Node.js</li></ul>
                 </div>
                 <div class="stack-group reveal">
-                    <h3>Frontend</h3>
+                    <span class="stack-num" aria-hidden="true">02</span>
+                    <div class="stack-head">
+                        <svg class="icon" aria-hidden="true"><use href="#i-code"></use></svg>
+                        <h3>Frontend</h3>
+                    </div>
+                    <p class="stack-desc">Interfaces que as pessoas realmente usam.</p>
                     <ul><li>TypeScript</li><li>JavaScript (ES6+)</li><li>React</li><li>HTML5 &amp; CSS3</li></ul>
                 </div>
                 <div class="stack-group reveal">
-                    <h3>Dados</h3>
+                    <span class="stack-num" aria-hidden="true">03</span>
+                    <div class="stack-head">
+                        <svg class="icon" aria-hidden="true"><use href="#i-db"></use></svg>
+                        <h3>Dados</h3>
+                    </div>
+                    <p class="stack-desc">Modelagem e consulta com performance.</p>
                     <ul><li>PostgreSQL</li><li>SQL</li><li>Redis</li><li>Modelagem de dados</li></ul>
                 </div>
                 <div class="stack-group reveal">
-                    <h3>Qualidade &amp; Infra</h3>
+                    <span class="stack-num" aria-hidden="true">04</span>
+                    <div class="stack-head">
+                        <svg class="icon" aria-hidden="true"><use href="#i-gear"></use></svg>
+                        <h3>Qualidade &amp; Infra</h3>
+                    </div>
+                    <p class="stack-desc">Testes e ambientes que não quebram.</p>
                     <ul><li>Pytest</li><li>Selenium</li><li>Docker</li><li>Git &amp; GitHub</li></ul>
                 </div>
             </div>
